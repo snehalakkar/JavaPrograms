@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  package com.bridgelabz.programs;
 
 import java.util.Scanner;
@@ -6,6 +7,12 @@ import java.util.Scanner;
  * @author bridgeit
  *
  */
+=======
+package com.bridgelabz.programs;
+
+import java.util.Scanner;
+
+>>>>>>> 346d642cbb818b23c5bf543496db5e13a25dbbc3
 public class FindYourNumber {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -44,5 +51,9 @@ public class FindYourNumber {
 		if (first > last)
 			System.out.println("sorry u did not imagine any number ");
 	}
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> 346d642cbb818b23c5bf543496db5e13a25dbbc3
