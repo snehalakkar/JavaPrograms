@@ -1,0 +1,139 @@
+package com.bridgelabz.utilityLogic;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Utility
+{    Scanner scan=new Scanner(System.in);
+	/**take file as input and store its contains into string variable using filereader and bufferreaderf
+	 * @param name i.e,any file
+	 * @return string 
+	 * @throws IOException
+	 */
+	public String filereadinglogic(String name) throws IOException 
+	{
+		FileReader fr=null;
+		BufferedReader bf = null;
+		try {
+			fr=new FileReader(name);
+			bf =new BufferedReader(fr);
+	
+			String line = "";
+			String s="";
+	
+			while((line=bf.readLine())!=null)
+			{
+				s=s+line+",";
+			}
+			return s;
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			if (bf != null) {
+				bf.close();				
+			}
+			if (fr != null) {
+				fr.close();				
+			}
+		}
+		return name;
+		
+	}
+	
+	/**
+	 * @param str[] 
+	 * @return int[]
+	 * @throws IOException
+	 */
+	public int[] intarr (String[] stringarr) throws IOException 
+	{
+		int intarr[]=new int[stringarr.length];
+		for (int i = 0; i < stringarr.length; i++) {
+			intarr[i] = Integer.parseInt(stringarr[i]);
+		}
+		return intarr;
+
+	}
+
+	public float[] floatarr (String[] stringarr) throws IOException 
+	{
+		float floatarr[]=new float[stringarr.length];
+		for (int i = 0; i < stringarr.length; i++) {
+			floatarr[i] = Float.parseFloat(stringarr[i]);
+		}
+		return floatarr;
+
+	}
+
+	public double[] doublearr (String[] stringarr) throws IOException 
+	{
+		double doublearr[]=new double[stringarr.length];
+		for (int i = 0; i < stringarr.length; i++) {
+			doublearr[i] = Double.parseDouble(stringarr[i]);
+		}
+		return doublearr;
+
+	}
+
+	/**
+	 * @return create int array 
+	 */
+	public int[] intarray()
+	{
+	
+	System.out.println("enter the size of array :");
+	int n=scan.nextInt();
+	int arr[]=new int[n];
+	System.out.println("enter the array elements");
+	for(int i=0;i<n;i++)
+		arr[i]=scan.nextInt();
+
+	System.out.println("array elements are");
+	for(int i=0;i<n;i++)
+		System.out.print(arr[i]+" ");
+	
+	System.out.println();
+	return arr;
+	}
+	
+	public char[] chararray()
+	{
+	Scanner scan=new Scanner(System.in);
+	System.out.println("enter the size of array :");
+	int n=scan.nextInt();
+	char arr[]=new char[n];
+	System.out.println("enter the array elements");
+	for(int i=0;i<n;i++)
+		arr[i]=scan.next().charAt(i);
+
+	System.out.println("array elements are");
+	for(int i=0;i<n;i++)
+		System.out.print(arr[i]+" ");
+	
+	System.out.println();
+	return arr;
+	}
+	
+	public double[] doublearr()
+	{
+	Scanner scan=new Scanner(System.in);
+	System.out.println("enter the size of array :");
+	int n=scan.nextInt();
+	double arr[]=new double[n];
+	System.out.println("enter the array elements");
+	for(int i=0;i<n;i++)
+		arr[i]=scan.nextDouble();
+
+	System.out.println("array elements are");
+	for(int i=0;i<n;i++)
+		System.out.print(arr[i]+" ");
+	
+	System.out.println();
+	return arr;
+	}
+}

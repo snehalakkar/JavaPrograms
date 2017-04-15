@@ -1,0 +1,12 @@
+package com.bridgelabz.addressBookCodes;
+
+import java.util.Comparator;
+
+public class Sorting implements Comparator{
+@Override
+public int compare(Person p1, Person p2) {
+	
+	System.out.println(p1.getFirstName().compareTo(p2.getFirstName()));
+	return p1.getFirstName().compareTo(p2.getFirstName());
+}
+}

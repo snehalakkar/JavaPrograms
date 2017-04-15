@@ -1,0 +1,10 @@
+package com.bridgelabz.addressBookCodes;
+
+public interface AddressBook {
+public void createAddressBook();
+public void addPerson(String bookName);
+public void deletePerson();
+public void updatePerson();
+public void sortByName();
+public void sortByZip();
+}

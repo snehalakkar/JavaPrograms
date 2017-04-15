@@ -1,0 +1,14 @@
+import java.util.HashSet;
+
+public class Prac {
+public static void main(String[] args) {
+	int phone=1234567810;
+	
+	HashSet<Integer> hashSet=new HashSet<>();
+	boolean ans=hashSet.contains(phone);
+	if(!ans){
+		hashSet.add(phone);
+	}
+	//System.out.println(ans);
+}
+}

@@ -1,0 +1,10 @@
+package com.bridgelabz.service;
+
+public interface AddressBook {
+public void createAddressBook();
+public void deletePerson();
+public void updatePerson();
+public void sortByName();
+public void sortByZip();
+public void addPerson(String addressBookName1);
+}

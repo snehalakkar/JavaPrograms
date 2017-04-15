@@ -1,0 +1,28 @@
+package com.bridgelabz.programs;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import com.bridgelabz.utilityLogic.Utility;
+
+public class UtilityAccessClass {
+public static void main(String[] args) {
+	Scanner scanner=new Scanner(System.in);
+	Utility utility=new Utility();
+	int[] arr=utility.intarray();
+	Arrays.sort(arr);
+	System.out.println("\n Enter the element which you want to search ");
+	int searchint=scanner.nextInt();
+	utility.binsearchForInt(arr, searchint);
+	
+    String[] strarr=utility.stringarray();
+    Arrays.sort(strarr);
+    System.out.println("\n Enter the word which you want to search ");
+	String searchword=scanner.next();
+    System.out.println("\n array elements after sorting are:");
+    for (int i = 0; i < strarr.length; i++) {
+		System.out.println(strarr[i]);
+	}
+    utility.binsearchForString(strarr, searchword);
+}
+}

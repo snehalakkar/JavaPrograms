@@ -1,0 +1,118 @@
+package com.bridgelabz.programs;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+import com.bridgelabz.utilityLogic.Utility;
+
+/**orderedList programme
+ * @author bridgeit
+ *
+ */
+public class OrderedList {
+	public static void main(String[] args) throws IOException {
+		Utility utility = new Utility();
+		Scanner scanner = new Scanner(System.in);
+
+		String string = utility.filereadinglogic("/home/bridgeit/JavaPrograms/JavaProgramss/text files/integerinput.txt");
+		String[] stringarray = string.split(",");
+		System.out.println("string present in file is :" + stringarray);
+		int[] intarray = new int[stringarray.length];
+		intarray = conversionLogic(stringarray);
+
+		System.out.println("\n Enter the element which you want to search ");
+		int search = scanner.nextInt();
+
+		linkedlistOperations(intarray,search);
+		//fileWritingLogic();
+	}
+
+	/*private static void fileWritingLogic() throws IOException {
+File file=new File("/home/bridgeit/JavaPrograms/JavaProgramss/text files/integerinput.txt");		
+FileWriter fileWriter=null;
+BufferedWriter bufferedWriter=null;
+
+//this logic is to check file created or not
+			if (!file.exists()) {
+				file.createNewFile();
+			}	
+			fileWriter=new FileWriter(file);
+			fileWriter.write(str);
+			
+	}
+*/
+	/**adding or removing elements from linkedlist
+	 * @param intarray
+	 * @param search
+	 */
+	private static void linkedlistOperations(int[] intarray, int search) {
+		int count=0;
+		FileWriter fileWriter=null;
+		BufferedWriter bufferedWriter=null;
+		LinkedList<Integer> linkedlist = new LinkedList<Integer>();
+		for (int i = 0; i < intarray.length; i++) {
+			linkedlist.add(intarray[i]);
+		}
+
+
+		if (linkedlist.contains(search)) {
+			System.out.println("hunuhnhn"+linkedlist.remove(linkedlist.indexOf(search)));
+		} else {
+			linkedlist.add(search);
+		}
+
+		// to sort linkedlist
+		Collections.sort(linkedlist);
+		System.out.println("\n LinkedList after performing operations ");
+		Iterator<Integer> iterator = linkedlist.iterator();
+		while (iterator.hasNext()) {
+			count++;
+			System.out.println(iterator.next());
+		}
+		
+		//for retriving elements from linkedlist and to store it inside int array
+		int[] intelements=new int[count];
+		for (int i = 0; i < intelements.length; i++) {
+			intelements[i]=linkedlist.get(i);
+		}
+		
+		String stringarray=Arrays.toString(intelements);
+		System.out.println(stringarray);
+		
+		File file=new File("/home/bridgeit/JavaPrograms/JavaProgramss/text files/integerinput.txt");		
+
+		//this logic is to check file created or not
+				/*	if (!file.exists()) {
+						file.createNewFile();
+					}	
+					fileWriter=new FileWriter(file);
+					fileWriter.write(stringarray);*/
+			} 
+	
+
+	/**converting string[] to int[]
+	 * @param stringarray
+	 * @return intarray
+	 */
+	private static int[] conversionLogic(String[] stringarray) {
+		int[] intarray = new int[stringarray.length];
+		// convert string array to int array
+		for (int i = 0; i < stringarray.length; i++) {
+			intarray[i] = Integer.parseInt(stringarray[i]);
+		}
+
+		// printing int array
+		System.out.println("\ncontents of int array :");
+		for (int i = 0; i < intarray.length; i++) {
+			System.out.print(intarray[i] + " ");
+		}
+		return intarray;
+	}
+}

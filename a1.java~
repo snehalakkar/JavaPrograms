@@ -1,0 +1,13 @@
+public class a1
+{
+public static void main(String[] args)
+{
+String s1="hello";
+String s2="bye";
+
+System.out.println(s1.charAt(4));
+System.out.println(s2.indexOf('h'));
+System.out.println(s1.toCharArray().toLowerCase());
+}
+}
+

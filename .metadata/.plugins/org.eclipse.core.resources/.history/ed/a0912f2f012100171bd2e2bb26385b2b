@@ -1,0 +1,86 @@
+package com.bridgelabz.addressBookCodes;
+
+import java.util.Comparator;
+
+public class Person {
+	private String firstName;
+	private String lastName;
+	private String address;
+	private String state;
+	private int zip;
+	private long phone;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public int getZip() {
+		return zip;
+	}
+
+	public long getPhone() {
+		return phone;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", state=" + state
+				+ ", zip=" + zip + ", phone=" + phone + "]";
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public void setZip(int zip) {
+		this.zip = zip;
+	}
+
+	public void setPhone(long phone) {
+		this.phone = phone;
+	}
+
+	/*
+	 * public void display() { System.out.println("Current details are :");
+	 * System.out.println("\nFirstName is: "+firstName);
+	 * System.out.println("\nLastName is: "+lastName);
+	 * System.out.println("\nAddress is: "+address);
+	 * System.out.println("\nState is: "+state);
+	 * System.out.println("\nZipcode is: "+zip);
+	 * System.out.println("\nphone is: "+phone);
+	 * 
+	 * }
+	 */
+	public static Comparator<Person> personName=new Comparator<Person>()
+	{
+		public int compare(Person p1, Person p2) {
+			System.out.println(p1.getFirstName().compareTo(p2.getFirstName()));
+			return p1.getFirstName().compareTo(p2.getFirstName());
+		}
+	}
+
+};

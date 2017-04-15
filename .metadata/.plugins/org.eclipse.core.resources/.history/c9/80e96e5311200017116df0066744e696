@@ -1,0 +1,11 @@
+package com.bridgelabz.addressBookCodes;
+
+import java.util.Scanner;
+
+public class MainClass {
+public MainClass() {
+Scanner scanner=new Scanner(System.in);
+System.out.println("\nEnter first name :");
+Str
+}
+}

@@ -1,0 +1,63 @@
+package com.bridgelabz.programs;
+
+import java.util.Scanner;
+
+public class FindYourNumber {
+public static void main(String[] args) 
+{
+	Scanner scanner =new Scanner(System.in);
+	System.out.println("enter the number :");
+	int range=scanner.nextInt();
+	
+	//int range=2^(n);
+	System.out.println("Imagine any number between 0 to " +(range-1)+" ");
+	//int imaginarynumber=scanner.nextInt();
+	
+	int first=0;
+	int last=range-1;
+	int mid=(first+last)/2;
+	boolean flag=false;
+	
+	//int arr[]=new int[last];
+	
+	 System.out.println("is your number is "+(mid)+ " then press ok || if smaller than "+mid+" then press yes else press no ");
+	 String ans=scanner.next();
+	 do{
+	 if(ans.equals("ok"))
+	 {System.out.println("ur number is :"+mid);
+	 flag=true;
+	 break;
+	 
+	 }
+	 
+	 else if(ans.equals("yes"))
+	 {
+		 last=mid;
+		 mid=(first+last)/2;
+		 System.out.println("is your number is "+(mid)+ " then press ok || if smaller than "+mid+" then press yes else press no ");
+		 if(ans.equals("ok"))
+		 {System.out.println("ur number is :"+mid);
+		 flag=true;
+		 break;
+		 
+		 }
+	 }
+	 else{
+		 first=mid;
+		 mid=(first+last)/2;
+		 System.out.println("is your number is "+(mid)+ " then press ok || if smaller than "+mid+" then press yes else press no ");
+		 if(ans.equals("ok"))
+		 {System.out.println("ur number is :"+mid);
+		 flag=true;
+		 break;
+		 
+		 }
+	 }
+	 }
+	 while(flag);
+		 
+		 
+	}
+	
+}
+

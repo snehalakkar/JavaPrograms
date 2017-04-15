@@ -1,0 +1,47 @@
+
+
+
+package com.bridgelabz.programs;
+
+import java.util.Scanner;
+
+ class StockLogic1 {
+	String stockname;
+	int sharenumber;
+	long shareprice;
+
+	StockLogic1(String stockname, int sharenumber, long shareprice) 
+	{
+		this.stockname = stockname;
+		this.sharenumber = sharenumber;
+		this.shareprice = shareprice;
+	}
+	//return " stockname: "+stockname+" sharenumber: "+sharenumber+" shareprice :"+ shareprice;
+
+
+ }
+
+
+public  class StockReports
+{
+	public static void main(String[] args)
+	{
+		Scanner scan =new Scanner(System.in);
+		System.out.println("enter number of companies ");
+		int n=scan.nextInt();
+		
+		StockLogic1 st[]=new StockLogic1[n];
+		for(int i=0;i<n;i++)
+		{
+		System.out.println("enter stock name:");
+		String stockname=scan.next();
+		System.out.println("enter number of shares ");
+		int sharenum=scan.nextInt();
+		System.out.println("enter price of shares ");
+		long shareprice=scan.nextInt();
+
+		st[i]=new StockLogic1(stockname,sharenum,shareprice);
+		}
+	}
+
+ }

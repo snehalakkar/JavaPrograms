@@ -1,0 +1,24 @@
+package com.bridgelabz.addressBookCodes;
+
+import java.util.Scanner;
+
+public class MainClass {
+	public MainClass() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("\nEnter first name :");
+		String firstname=scanner.next();
+		System.out.println("\nEnter last name :");
+		String lastname=scanner.next();
+		System.out.println("\nEnter address :");
+		String address=scanner.next();
+		System.out.println("\nEnter state name :");
+		String state=scanner.next();
+		System.out.println("\nEnter zip code :");
+		int zip=scanner.nextInt();
+		System.out.println("\nEnter phone number :");
+		long phone=scanner.nextLong();
+		
+		
+		System.out.println("\nchoices are :1. Add Person \n2. Delete Person \n3. Update Person \n4. SortByName \n.5 SortByZip  ");
+	}
+}

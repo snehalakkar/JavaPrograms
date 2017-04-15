@@ -1,0 +1,49 @@
+package com.bridgelabz.utilityLogic;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Utility
+{    
+	public String filereadinglogic(String name) throws IOException 
+	{
+		FileReader fr=null;
+		try {
+			fr=new FileReader(name);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		BufferedReader bf =new BufferedReader(fr);
+
+		String line="";
+		String s="";
+
+		while((line=bf.readLine())!=null)
+		{
+			s=s+line+",";
+		}
+		bf.close();
+		fr.close();
+		return s;
+	}
+
+	public int[] buildarray()
+	{
+	Scanner scan=new Scanner(System.in);
+	
+	int arr[]=new int[n];
+	System.out.println("enter the array elements");
+	for(int i=0;i<n;i++)
+		arr[i]=scan.nextInt();
+
+	System.out.println("array elements are");
+	for(int i=0;i<n;i++)
+		System.out.println(arr[i]);
+	return arr;
+	
+
+	}
+}
