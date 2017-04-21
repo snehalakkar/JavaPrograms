@@ -1,0 +1,10 @@
+package collectionPractice;
+
+import java.util.HashSet;
+
+public class HashCode {
+public static void main(String[] args) {
+	Student student=new Student();
+HashSet< Student> hashSet=new HashSet<>();
+}
+}

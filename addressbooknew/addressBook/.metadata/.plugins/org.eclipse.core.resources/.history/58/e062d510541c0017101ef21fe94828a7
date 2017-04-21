@@ -1,0 +1,68 @@
+package com.bridgelabz.utilityLogic;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Utility
+{    
+	/**take file as input and store its contains into string variable using filereader and bufferreaderf
+	 * @param name i.e,any file
+	 * @return string 
+	 * @throws IOException
+	 */
+	public String filereadinglogic(String name) throws IOException 
+	{
+		FileReader fr=null;
+		BufferedReader bf = null;
+		
+		String line = "";
+		try {
+			fr=new FileReader(name);
+			bf =new BufferedReader(fr);
+	
+			line="";
+			String s="";
+	
+			while((line=bf.readLine())!=null)
+			{
+				s=s+line+",";
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			if (bf != null) {
+				bf.close();				
+			}
+			if (fr != null) {
+				fr.close();				
+			}
+		}
+		return s;
+	}
+
+	/**
+	 * @return create int array 
+	 */
+	public int[] buildarray()
+	{
+	Scanner scan=new Scanner(System.in);
+	System.out.println("enter the size of array :");
+	int n=scan.nextInt();
+	int arr[]=new int[n];
+	System.out.println("enter the array elements");
+	for(int i=0;i<n;i++)
+		arr[i]=scan.nextInt();
+
+	System.out.println("array elements are");
+	for(int i=0;i<n;i++)
+		System.out.print(arr[i]+" ");
+	
+	System.out.println();
+	return arr;
+	}
+}

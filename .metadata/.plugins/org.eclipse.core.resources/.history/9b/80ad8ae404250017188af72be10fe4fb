@@ -1,0 +1,23 @@
+package concepts;
+
+public class Address {
+String state;
+String country;
+String city;
+public Address(String state, String country, String city) {
+	this.state = state;
+	this.country = country;
+	this.city = city;
+}
+public String getAddress()
+{
+	return "state :"+state+", country :"+country+" city:"+city;
+}
+
+public boolean equals(Object o)
+{
+	if(!(o instanceof Address)) return false;
+	Address address=(Address)o;
+	return 
+}
+}

@@ -1,0 +1,28 @@
+package com.bridgelabz.addressBookCodes;
+
+import java.util.Scanner;
+
+public class MainClass {
+	public MainClass() {
+		Scanner scanner = new Scanner(System.in);
+		Service service=new Service();
+		
+		System.out.println("\nchoices are :1. Add Person \n2. Delete Person \n3. Update Person \n4. SortByName \n.5 SortByZip  ");
+		System.out.println("\nEnter your choice ");
+		int choice=scanner.nextInt();
+		
+		switch(choice)
+		{
+		case 1:service.addPerson();
+		break;
+		case 2:service.deletePerson();
+		break;
+		case 3:service.updatePerson();
+		break;
+		case 4:service.sortByName();
+		break;
+		case 5:service.sortByZip();
+		break;
+		}
+	}
+}

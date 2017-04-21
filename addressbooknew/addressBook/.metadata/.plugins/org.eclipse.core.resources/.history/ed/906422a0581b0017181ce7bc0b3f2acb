@@ -1,0 +1,62 @@
+package com.bridgelabz.programs;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+public class TwoDArray {
+
+
+
+	public static void main(String[] args) throws IOException 
+	{
+		Scanner scan =new Scanner(System.in);
+		FileReader fr=null;
+		try {
+			fr=new FileReader("input.txt");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		BufferedReader bf =new BufferedReader(fr);
+
+		String line="";
+		String s="";
+
+		while(bf.readLine()!= "null")
+		{
+			line=bf.readLine();
+		}
+		String s1[]= line.split(",");
+
+		int intarr[]=new int[s1.length];
+
+		for(int i=0;i<s1.length;i++)
+		{
+			intarr[i]=Integer.parseInt(s1[i]);
+		}
+
+		System.out.println("1D array elements are :");
+		for(int j=0;j<s1.length;j++)
+		{
+			System.out.println(intarr);
+		}
+
+
+		System.out.println("Enter number of rows :");
+		int r=scan.nextInt();
+
+		System.out.println("Enter number of cols :");
+		int c=scan.nextInt();
+		int intTwo[][]=new int[r][c];
+
+		System.out.println("2D array elements are :");
+		for(int i=0;i<s1.length;i++)
+		{
+			for(int j=0;j<s1.length;j++)
+			{
+				System.out.println(intTwo[i][j]);
+			}
+		}
+	}
+}
+

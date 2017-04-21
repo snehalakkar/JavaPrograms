@@ -1,0 +1,29 @@
+package com.bridgelabz.programs;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+public class TwoDArray {
+	
+
+	
+	public static void main(String[] args) throws IOException {
+		FileReader fr=null;
+		 try {
+			fr=new FileReader("input.txt");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		 BufferedReader bf =new BufferedReader(fr);
+		 
+		 String line="";
+		 String s="";
+		 
+		 while(bf.readLine()!= "null")
+		 {
+			 line=bf.readLine();
+	}
+		String[] s1= line.split(",");
+	}
+}
+

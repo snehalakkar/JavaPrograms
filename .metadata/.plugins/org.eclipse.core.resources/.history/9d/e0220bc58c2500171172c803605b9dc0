@@ -1,0 +1,22 @@
+package collectionPractice;
+
+import java.util.PriorityQueue;
+
+public class Queue3 {
+public static void main(String[] args) {
+	PriorityQueue<Employee> priorityQueue=new PriorityQueue<>();
+	priorityQueue.add(new Employee("snehal", 21));
+	priorityQueue.add(new Employee("pooja", 22));
+	System.out.println(priorityQueue);
+
+	while (priorityQueue.peek()!=null)
+	{
+		System.out.println(priorityQueue.poll());
+	}
+
+	PriorityQueue<Employee> priorityQueue1=new PriorityQueue<>(new SortByAgeComparator());
+	priorityQueue.add(new Employee("akkar", 21));
+	priorityQueue.add(new Employee("rajwar", 22));
+	System.out.println(priorityQueue);
+} 
+}

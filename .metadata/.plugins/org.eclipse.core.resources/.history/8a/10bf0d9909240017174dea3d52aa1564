@@ -1,0 +1,19 @@
+package collectionPractice;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Queue1 {
+public static void main(String[] args) {
+	Queue<String> queue=new LinkedList<>();
+	queue.add("snehal");
+	queue.offer("akkar");
+	queue.offer("soni");
+	queue.add("hi");
+	System.out.println(queue.peek());
+String name=queue.poll();
+if(name!=null){
+System.out.println();	
+}
+}
+}

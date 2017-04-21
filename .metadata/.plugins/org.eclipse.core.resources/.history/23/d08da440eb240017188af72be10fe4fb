@@ -1,0 +1,18 @@
+package collectionPractice;
+
+import java.util.HashSet;
+
+public class HashCode {
+	public static void main(String[] args) {
+		System.out.println("programme started ");
+		Student student = new Student(1, "snehal", 20);
+		student = new Student(1, "snehal", 20);
+		student = new Student(3, "snehal", 20);
+		HashSet<Student> hashSet = new HashSet<>();
+		hashSet.add(student);
+		hashSet.add(student);
+		System.out.println(hashSet);
+		System.out.println("programme ended ");
+
+	}
+}

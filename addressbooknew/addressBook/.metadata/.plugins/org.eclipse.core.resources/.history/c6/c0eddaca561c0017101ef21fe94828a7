@@ -1,0 +1,58 @@
+package com.bridgelabz.programs;
+
+import java.util.Date;
+import java.util.Scanner;
+
+public class Stopwatch {
+	public static void main(String[] args) {
+
+		StopwatchBussiness sw=new StopwatchBussiness();
+
+		long starttime=sw.start();
+		System.out.println(starttime);
+		
+			System.out.println();
+			System.out.println();
+			System.out.println();
+
+			System.out.println("------------------------------------");
+
+			System.out.println();
+			System.out.println();
+			System.out.println();
+		
+			System.out.println();
+			System.out.println();
+			System.out.println();
+
+			System.out.println("------------------------------------");
+
+			System.out.println();
+			System.out.println();
+			System.out.println();
+		
+			System.out.println();
+			System.out.println();
+			System.out.println();
+
+			System.out.println("------------------------------------");
+
+			System.out.println();
+			System.out.println();
+			System.out.println();
+		
+			System.out.println();
+			System.out.println();
+			System.out.println();
+
+			System.out.println("------------------------------------");
+
+			System.out.println();
+			System.out.println();
+			System.out.println();
+		
+		long stoptime=sw.stop();
+		System.out.println(stoptime);
+		sw.timeelapsed();
+	}
+}

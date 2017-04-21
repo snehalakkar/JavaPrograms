@@ -1,0 +1,21 @@
+package com.bridgelabz.programs;
+
+import java.util.Scanner;
+
+public class FrogLogic {
+public static void main(String[] args) {
+	System.out.println("\n Enter the starttime ");
+	Scanner scanner=new Scanner(System.in);
+	int startTime=scanner.nextInt();
+	System.out.println("\n Enter the end time ");
+	int endTime=scanner.nextInt();
+	System.out.println("\n enter the height of wall ");
+	int wallHeight=scanner.nextInt();
+	
+numberOfAttempt(startTime,endTime,wallHeight);
+}
+private static void numberOfAttempt(int startTime, int endTime, int wallHeight) {
+	
+}
+
+}

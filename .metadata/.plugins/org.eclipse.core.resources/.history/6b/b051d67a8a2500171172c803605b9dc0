@@ -1,0 +1,11 @@
+package collectionPractice;
+
+import java.util.PriorityQueue;
+
+public class Queue3 {
+public static void main(String[] args) {
+	PriorityQueue<Employee> priorityQueue=new PriorityQueue<>();
+	
+} 
+
+}

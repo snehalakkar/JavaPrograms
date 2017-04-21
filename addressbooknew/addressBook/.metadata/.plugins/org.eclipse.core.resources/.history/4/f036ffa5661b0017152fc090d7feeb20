@@ -1,0 +1,28 @@
+package com.bridgelabz.utilityLogic;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class Utility 
+{
+	FileReader fr=null;
+	try {
+		fr=new FileReader("input.txt");
+	} catch (FileNotFoundException e) {
+		e.printStackTrace();
+	}
+	BufferedReader bf =new BufferedReader(fr);
+
+	String line="";
+	String s="";
+
+	while((line=bf.readLine())!=null)
+	{
+		s=s+line+",";
+	}
+
+	System.out.println(s);
+	String s1[]= s.split(",");
+
+}

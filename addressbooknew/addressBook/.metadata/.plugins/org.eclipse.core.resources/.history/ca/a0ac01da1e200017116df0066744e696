@@ -1,0 +1,11 @@
+package com.bridgelabz.addressBookCodes;
+
+public class Service {
+	AddressBook addressBook=new AddressBookController();
+	addPerson()
+	addressBook.addPerson();
+	addressBook.deletePerson();
+	addressBook.updatePerson();
+	addressBook.sortByName();
+	addressBook.sortByZip();
+}

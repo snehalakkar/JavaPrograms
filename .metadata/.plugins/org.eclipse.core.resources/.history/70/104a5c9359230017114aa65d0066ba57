@@ -1,0 +1,60 @@
+package com.bridgelabz.programs;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+import com.bridgelabz.utilityLogic.Utility;
+
+public class HashingFunction {
+public static void main(String[] args) throws IOException {
+	Utility utility=new Utility();
+	int remainder = 0;
+	Scanner scanner=new Scanner(System.in);
+	String result=utility.filereadinglogic("input.txt");
+	String[] stringArray=result.split(",");
+	System.out.println(stringArray.length);
+	int[] intArray=new int[stringArray.length-1];
+	for (int i = 0; i < intArray.length; i++) {
+		intArray[i]=Integer.parseInt(stringArray[i]);
+	}
+	
+	LinkedList<Integer> linkedList=new LinkedList<>();
+	HashMap<Integer, LinkedList<Integer>> hashMap=new HashMap<Integer, LinkedList<Integer>>();
+	
+	for (int i = 0; i <=intArray.length; i++) {
+		hashMap.put(i, new LinkedList<>());
+	}
+	
+	
+	LinkedList<Integer> linkedList2=null;
+	for (int i = 0; i < intArray.length; i++) {
+		 remainder=intArray[i]%(intArray.length+1);
+		linkedList2= hashMap.get(remainder);
+		 linkedList2.add(intArray[i]);
+		 hashMap.put(remainder, linkedList);
+	}
+
+
+System.out.println("\n enter the number which you want to search from the slot ");
+int search=scanner.nextInt();
+
+
+	int rem=search%(intArray.length+1);
+			LinkedList<Integer> linkedList2=hashMap.get(rem);
+	for (int i = 0; i < linkedList2.size(); i++) {
+		if(search==linkedList2.get(i))
+		{
+			System.out.println("element found at index "+(i+1));
+			linkedList.remove(i);
+		}else{
+			System.out.println("\nelement not found ");
+			linkedList.add(i, rem);
+			break;
+			
+		}
+	}
+
+}
+}

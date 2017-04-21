@@ -1,0 +1,10 @@
+package com.bridgelabz.programs;
+
+public class Stopwatch {
+public static void main(String[] args) {
+	System.out.println("enter 0 to start the timer :");
+	start();
+	
+}
+
+}

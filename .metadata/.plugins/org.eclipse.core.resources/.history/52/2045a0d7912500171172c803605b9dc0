@@ -1,0 +1,16 @@
+package setprogrammes;
+
+import java.util.Scanner;
+
+public class SearchDistinctString {
+public static void main(String[] args) {
+	Scanner scanner=new Scanner(System.in);
+	System.out.println("Enter the string to find distinct character from it");
+	String string=scanner.next();
+	searchDistint(string);
+}
+
+private static void searchDistint(String string) {
+	
+}
+}

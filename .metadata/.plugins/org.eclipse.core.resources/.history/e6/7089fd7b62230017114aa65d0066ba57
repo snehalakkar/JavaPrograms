@@ -1,0 +1,7 @@
+package com.bridgelabz.programs;
+
+public class FrogLogic {
+public static void main(String[] args) {
+	
+}
+}

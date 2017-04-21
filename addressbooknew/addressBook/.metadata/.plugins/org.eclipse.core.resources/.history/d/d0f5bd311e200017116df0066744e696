@@ -1,0 +1,58 @@
+package com.bridgelabz.addressBookCodes;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class AddressBookController implements AddressBook{
+	Scanner scanner=new Scanner(System.in);
+	HashMap<String, Person> hashMap=new HashMap<String,Person>();
+	String addBookName="Bridgelabz";
+	
+public void addPerson(){
+	Person person=new Person();
+	System.out.println("\nEnter first name :");
+	String firstName=scanner.next();
+	person.setFirstName(firstName);
+	System.out.println("\nEnter last name :");
+	String lastName=scanner.next();
+	person.setLastName(lastName);
+	System.out.println("\nEnter address :");
+	String address=scanner.next();
+	person.setAddress(address);
+	System.out.println("\nEnter state name :");
+	String state=scanner.next();
+	person.setState(state);
+	System.out.println("\nEnter zip code :");
+	int zip=scanner.nextInt();
+	person.setZip(zip);
+	System.out.println("\nEnter phone number :");
+	long phone=scanner.nextLong();
+	person.setPhone(phone);
+
+	hashMap.put(addBookName, );
+}
+
+@Override
+public void deletePerson() {
+	
+}
+
+@Override
+public void updatePerson() {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void sortByName() {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void sortByZip() {
+	// TODO Auto-generated method stub
+	
+}
+
+}

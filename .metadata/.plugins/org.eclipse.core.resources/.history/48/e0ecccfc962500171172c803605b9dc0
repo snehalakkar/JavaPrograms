@@ -1,0 +1,10 @@
+package serializationUtil;
+
+import java.io.FileOutputStream;
+
+public class SerializationUtil {
+public static void serialized(String fileName)
+{
+	FileOutputStream fileOutputStream=new FileOutputStream(arg0)
+}
+}

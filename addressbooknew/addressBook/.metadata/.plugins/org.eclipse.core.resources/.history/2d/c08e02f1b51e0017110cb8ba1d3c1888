@@ -1,0 +1,25 @@
+package com.bridgelabz.programs;
+
+import java.util.Scanner;
+
+public class VendingMachine {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int[] array = { 1000, 500, 100, 50, 10, 5, 2, 1 };
+
+		System.out.println("Enter the amount which you want to entered ");
+		int amount = scanner.nextInt();
+
+		while (amount != 0) {
+			for (int i = 0; i < array.length; i++) {
+				int numOfNotes = amount / array[i];
+				if (numOfNotes != 0) {
+					System.out.println(numOfNotes + " notes of  " + array[i]);
+				}
+				int newValue = numOfNotes * array[i];
+				amount = amount - newValue;
+			}
+		}
+
+	}
+}

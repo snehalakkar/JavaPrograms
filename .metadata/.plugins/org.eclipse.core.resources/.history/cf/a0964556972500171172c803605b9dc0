@@ -1,0 +1,16 @@
+package serializationUtil;
+
+import java.io.BufferedOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+
+public class SerializationUtil {
+public static void serialized(String fileName) throws IOException
+{
+	FileOutputStream fileOutputStream=new FileOutputStream("/home/bridgeit/JavaPrograms/addressBook2/file.ser");
+	BufferedOutputStream bufferedOutputStream=new BufferedOutputStream(fileOutputStream);
+	ObjectOutputStream objectOutputStream=new ObjectOutputStream(bufferedOutputStream);
+}
+}

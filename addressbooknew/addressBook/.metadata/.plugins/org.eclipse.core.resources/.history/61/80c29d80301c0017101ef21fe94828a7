@@ -1,0 +1,16 @@
+package com.bridgelabz.programs;
+
+public class StockReport {
+String stockname;
+long sharenumber;
+long shareprice;
+public String StockReport(String stockname, long sharenumber, long shareprice) 
+{
+	this.stockname = stockname;
+	this.sharenumber = sharenumber;
+	this.shareprice = shareprice;
+
+return " stockname: "+stockname+" sharenumber: "+sharenumber+" shareprice :"+ shareprice;
+
+}
+}

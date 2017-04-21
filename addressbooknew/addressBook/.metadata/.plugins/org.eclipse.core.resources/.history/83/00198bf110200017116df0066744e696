@@ -1,0 +1,10 @@
+package com.bridgelabz.addressBookCodes;
+
+public class Person {
+private firstName;
+private lastName;
+private address;
+private zip;
+private phone;
+
+}

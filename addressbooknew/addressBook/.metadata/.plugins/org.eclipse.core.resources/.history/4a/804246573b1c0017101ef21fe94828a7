@@ -1,0 +1,40 @@
+package com.bridgelabz.programs;
+
+import java.util.Scanner;
+
+class StockReport {
+	String stockname;
+	int sharenumber;
+	long shareprice;
+
+	StockReport(String stockname, int sharenumber, long shareprice) 
+	{
+		this.stockname = stockname;
+		this.sharenumber = sharenumber;
+		this.shareprice = shareprice;
+	}
+	//return " stockname: "+stockname+" sharenumber: "+sharenumber+" shareprice :"+ shareprice;
+
+
+}
+
+
+class MainClass
+{
+	public static void main(String[] args)
+	{
+		Scanner scan =new Scanner(System.in);
+		System.out.println("enter number of companies ");
+		int n=scan.nextInt();
+		StockReport st=new 
+		System.out.println("enter stock name:");
+		String stockname=scan.next();
+		System.out.println("enter number of shares ");
+		int sharenum=scan.nextInt();
+		System.out.println("enter price of shares ");
+		long shareprice=scan.nextInt();
+
+		StockReport st=new StockReport(stockname,sharenum,shareprice);
+
+	}
+}

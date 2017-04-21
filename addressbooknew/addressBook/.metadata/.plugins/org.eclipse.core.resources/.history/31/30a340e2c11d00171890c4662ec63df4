@@ -1,0 +1,35 @@
+package com.bridgelabz.programs;
+
+import com.bridgelabz.utilityLogic.Utility;
+
+public class InsertionSortLogic {
+	public static void main(String[] args) {
+		Utility u = new Utility();
+		int arr[] = u.intarray();
+		System.out.println("length :" + arr.length);
+		insertionSorting(arr);
+	}
+
+	private static void insertionSorting(int[] arr) {
+
+		for (int i = 1; i < arr.length; i++)// just for iterating
+		{
+			int j = i;
+
+			while (j > 0)// to perform swapping with previous
+			{
+				if (arr[j] < arr[j - 1]) {
+					int temp = arr[j];
+					arr[j] = arr[j - 1];
+					arr[j - 1] = temp;
+				}
+				j--;
+			}
+		}
+
+		System.out.println("array after sorting :");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]+ " ");
+		}
+	}
+}

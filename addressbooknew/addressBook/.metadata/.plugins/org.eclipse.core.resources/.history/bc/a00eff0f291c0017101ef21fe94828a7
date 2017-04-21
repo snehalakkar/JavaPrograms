@@ -1,0 +1,26 @@
+package com.bridgelabz.programs;
+
+public class StopwatchBussiness {
+    long starttime=0;
+	long stoptime=0;
+	boolean running=false;
+	public  long start()
+	{    
+		 starttime =System.currentTimeMillis();
+		System.out.println(starttime);
+		running= true;
+		return starttime;
+	}
+	
+	public  long stop()
+	{    
+		 stoptime =System.currentTimeMillis();
+		System.out.println(stoptime);
+		running=  false;
+		return stoptime;
+	}
+	
+	}
+
+
+

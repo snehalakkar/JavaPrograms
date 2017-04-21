@@ -1,0 +1,51 @@
+package com.bridgelabz.programs;
+
+import java.util.Scanner;
+
+public class FrogLogicMultipleWall {
+	public static void main(String[] args) {
+		int count=0;
+
+		System.out.println("\n Enter the starttime ");
+		Scanner scanner=new Scanner(System.in);
+		int startPosition=scanner.nextInt();
+		
+		System.out.println("\n Enter the increament value ");
+		int increament=scanner.nextInt();
+		System.out.println("\n Enter the value of decreament ");
+		int decreament=scanner.nextInt();
+		System.out.println("\n Enter the number of wall ");
+		int walls=scanner.nextInt();
+		int wallsArray[]=new int[walls];
+
+		System.out.println("\n Enter the height of first,second and third wall");
+		
+		for (int i = 0; i < wallsArray.length; i++) {
+			wallsArray[i]=scanner.nextInt();
+			while (startPosition<wallsArray[i]) {
+				count++;
+				startPosition=startPosition+increament-decreament;
+
+			}	
+			System.out.println("\n number of attempts for  wall  :"+count);
+
+		}
+
+		//numberOfAttempt(startPosition,increament,decreament,wallHeight,walls);
+
+	}
+
+	/*private static void numberOfAttempt(int startPosition, int increament, int decreament, int wallHeight,int walls) {
+		int progress=startPosition;
+		int count=0;
+		for(int i=0;i<walls;i++){
+			while (startPosition<wallHeight) {
+				count++;
+				startPosition=startPosition+increament-decreament;
+
+			}	
+		}
+		System.out.println("\n number of attempts required :"+count);
+
+	}*/
+}

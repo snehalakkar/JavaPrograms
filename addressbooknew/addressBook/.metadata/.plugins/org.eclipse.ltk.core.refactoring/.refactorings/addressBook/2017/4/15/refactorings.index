@@ -1,0 +1,9 @@
+1492146458872	Infer generic type arguments
+1492169959506	Rename resource 'controlle'
+1492169993031	Move 'Person.java' to 'model'
+1492170043691	Move 'Service.java' to 'service'
+1492170072763	Move 'MainClass.java' to 'tester'
+1492170160440	Move 'AddressBook.java' to 'service'
+1492170212003	Rename resource 'AddressBookController.java'
+1492170246510	Rename resource 'Service.java'
+1492170287014	Move 'AddressBookController.java' to 'controller'

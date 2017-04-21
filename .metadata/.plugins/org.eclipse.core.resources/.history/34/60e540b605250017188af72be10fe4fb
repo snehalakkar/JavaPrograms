@@ -1,0 +1,32 @@
+package concepts;
+
+public class Student {
+int roolno;
+String name;
+String branch;
+Address address;
+
+public Student(int roolno, String name, String branch, Address address) {
+	this.roolno = roolno;
+	this.name = name;
+	this.branch = branch;
+	this.address = address;
+}
+
+void display()
+{
+	System.out.println("roolno :"+roolno);
+	System.out.println("name :"+name);
+	System.out.println("branch :"+branch);
+	System.out.println("Address :"+address.getAddress());
+}
+
+public boolean equals(Object o)
+{
+	if(!(o instanceof Student)) return false;
+	Student student=(Student)o;
+	return roolno==student.roolno && name.equals(student.name) && branch.equals(student.branch) && address.equals(student.address);
+ }
+
+
+}
